@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String pw = "password";
+        int attempt = 0;
+        while(attempt<=3){
+            System.out.println("Enter a password :");
+            String up = sc.nextLine();
+            if(up.equals(pw)){
+                 System.out.println("password is correct"); 
+                 break;
+            }
+            else{
+                System.out.println("Invlid password try again");
+                attempt++;
+            }
+            
+        }
+        if (attempt>3){
+            System.out.println("Access Denied");
+        }
+    }
+}
